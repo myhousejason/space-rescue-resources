@@ -16,8 +16,7 @@ for joystick in joysticks:
 
 pygame.display.set_caption(Globals.window_name)
 window_size = (Globals.SCREEN_WIDTH, Globals.SCREEN_HEIGHT)
-screen = pygame.display.set_mode(window_size,
-                                 pygame.DOUBLEBUF, 32)
+screen = pygame.display.set_mode(window_size,pygame.DOUBLEBUF, 32)
 
 Globals.next_level = Globals.start_level
 levels = Globals.levels
@@ -36,10 +35,10 @@ while Globals.running:
 
     if exit_val is True or Globals.running is False:
 
-        Globals.next_level = Globals.end_game_level
+            Globals.next_level = Globals.end_game_level
 
-        if len(levels) == 1:
-            break
+    if len(levels) == 1:
+         break
 
     if Globals.exiting:
         break
